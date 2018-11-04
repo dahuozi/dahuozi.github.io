@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>git版本管理工具  - 赵绪浪</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ZhaoXuLang" />
+  <meta name="description" content="基础操作 初始化 git init 进行添加文件 git add filename 进行提交 git commit -m&amp;rdquo;说明&amp;rdquo; 进行远程推送 git push 克隆远程仓库 git clone git@git.xxxxxxxxxxx 进行远程拉取 git pull &amp;em" />
+<meta name="keywords" content="git" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.50" />
+
+
+<link rel="canonical" href="dahuozi.github.io/post/studygit/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/dahuozi.github.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/dahuozi.github.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/dahuozi.github.io/favicon-16x16.png">
+<link rel="manifest" href="/dahuozi.github.io/manifest.json">
+<link rel="mask-icon" href="/dahuozi.github.io/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dahuozi.github.io/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/dahuozi.github.io/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="git版本管理工具 " />
+<meta property="og:description" content="基础操作 初始化 git init 进行添加文件 git add filename 进行提交 git commit -m&rdquo;说明&rdquo; 进行远程推送 git push 克隆远程仓库 git clone git@git.xxxxxxxxxxx 进行远程拉取 git pull &em" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="dahuozi.github.io/post/studygit/" /><meta property="article:published_time" content="2018-11-04T12:36:52&#43;08:00"/>
+<meta property="article:modified_time" content="2018-11-04T12:36:52&#43;08:00"/>
+
+<meta itemprop="name" content="git版本管理工具 ">
+<meta itemprop="description" content="基础操作 初始化 git init 进行添加文件 git add filename 进行提交 git commit -m&rdquo;说明&rdquo; 进行远程推送 git push 克隆远程仓库 git clone git@git.xxxxxxxxxxx 进行远程拉取 git pull &em">
+
+
+<meta itemprop="datePublished" content="2018-11-04T12:36:52&#43;08:00" />
+<meta itemprop="dateModified" content="2018-11-04T12:36:52&#43;08:00" />
+<meta itemprop="wordCount" content="361">
+
+
+
+<meta itemprop="keywords" content="git," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="git版本管理工具 "/>
+<meta name="twitter:description" content="基础操作 初始化 git init 进行添加文件 git add filename 进行提交 git commit -m&rdquo;说明&rdquo; 进行远程推送 git push 克隆远程仓库 git clone git@git.xxxxxxxxxxx 进行远程拉取 git pull &em"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/dahuozi.github.io/" class="logo">ZhaoXuLang</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="dahuozi.github.io/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="dahuozi.github.io/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="dahuozi.github.io/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="dahuozi.github.io/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/dahuozi.github.io/" class="logo">ZhaoXuLang</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="dahuozi.github.io/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="dahuozi.github.io/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="dahuozi.github.io/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="dahuozi.github.io/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">git版本管理工具 </h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-11-04 </span>
+        <div class="post-category">
+            
+              <a href="/dahuozi.github.io/categories/%E5%AD%A6%E4%B9%A0/"> 学习 </a>
+            
+          </div>
+        <span class="more-meta"> 约 361 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#基础操作">基础操作</a>
+<ul>
+<li><a href="#初始化">初始化</a></li>
+<li><a href="#进行添加文件">进行添加文件</a></li>
+<li><a href="#进行提交">进行提交</a></li>
+<li><a href="#进行远程推送">进行远程推送</a></li>
+<li><a href="#克隆远程仓库">克隆远程仓库</a></li>
+<li><a href="#进行远程拉取">进行远程拉取</a></li>
+<li><a href="#查看提交日志">查看提交日志</a></li>
+</ul></li>
+<li><a href="#分支操作">分支操作</a>
+<ul>
+<li><a href="#创建分支dev">创建分支dev</a></li>
+<li><a href="#切换分支dev">切换分支dev</a></li>
+<li><a href="#查看分支">查看分支</a></li>
+<li><a href="#创建选择分支">创建选择分支</a></li>
+<li><a href="#快速合并分支到">快速合并分支到</a></li>
+<li><a href="#删除分支dev">删除分支dev</a></li>
+<li><a href="#存放">存放</a></li>
+<li><a href="#查看存放">查看存放</a></li>
+<li><a href="#恢复指定stash">恢复指定stash</a></li>
+</ul></li>
+<li><a href="#高级操作">高级操作</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<hr />
+
+<h4 id="基础操作">基础操作</h4>
+
+<hr />
+
+<h5 id="初始化">初始化</h5>
+
+<blockquote>
+<p>git init</p>
+</blockquote>
+
+<h5 id="进行添加文件">进行添加文件</h5>
+
+<blockquote>
+<p>git add filename</p>
+</blockquote>
+
+<h5 id="进行提交">进行提交</h5>
+
+<blockquote>
+<p>git commit -m&rdquo;说明&rdquo;</p>
+</blockquote>
+
+<h5 id="进行远程推送">进行远程推送</h5>
+
+<blockquote>
+<p>git push</p>
+</blockquote>
+
+<h5 id="克隆远程仓库">克隆远程仓库</h5>
+
+<blockquote>
+<p>git clone git@git.xxxxxxxxxxx</p>
+</blockquote>
+
+<h5 id="进行远程拉取">进行远程拉取</h5>
+
+<blockquote>
+<p>git pull</p>
+</blockquote>
+
+<p>&emsp;&emsp;当我们进行git add的时候，其实是把文件添加进了暂存区；当git commit的时候，就把文件添加进入了当前分支；git push则是进行推送到远程分支；</p>
+
+<h5 id="查看提交日志">查看提交日志</h5>
+
+<blockquote>
+<p>git log  （&ndash;pretty=oneline）</p>
+</blockquote>
+
+<ul>
+<li>HEAD指向的版本就是当前版本，git reset &ndash;hard commit_id即可回退到指定版本。</li>
+<li>git reflog 查看历史指令</li>
+</ul>
+
+<h4 id="分支操作">分支操作</h4>
+
+<h5 id="创建分支dev">创建分支dev</h5>
+
+<blockquote>
+<p>git branch dev</p>
+</blockquote>
+
+<h5 id="切换分支dev">切换分支dev</h5>
+
+<blockquote>
+<p>git checkout dev</p>
+</blockquote>
+
+<h5 id="查看分支">查看分支</h5>
+
+<blockquote>
+<p>git branch</p>
+</blockquote>
+
+<h5 id="创建选择分支">创建选择分支</h5>
+
+<blockquote>
+<p>git checkout -b dev</p>
+</blockquote>
+
+<h5 id="快速合并分支到">快速合并分支到</h5>
+
+<blockquote>
+<p>git  merge dev (dev是领先的分支，合并带领先分支)</p>
+</blockquote>
+
+<h5 id="删除分支dev">删除分支dev</h5>
+
+<blockquote>
+<p>git branch -d dev</p>
+</blockquote>
+
+<h5 id="存放">存放</h5>
+
+<blockquote>
+<p>git stash</p>
+</blockquote>
+
+<h5 id="查看存放">查看存放</h5>
+
+<blockquote>
+<p>git stash list</p>
+</blockquote>
+
+<h5 id="恢复指定stash">恢复指定stash</h5>
+
+<blockquote>
+<p>git stash apply stash@{0}</p>
+</blockquote>
+
+<p>在分支合并的时候，遇到一个问题 如果存在</p>
+
+<h4 id="高级操作">高级操作</h4>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ZhaoXuLang</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-11-04</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/dahuozi.github.io/tags/git/">git</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="dahuozi.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">计算机网络</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:zhaxulang@qq.com" class="iconfont icon-email" title="email"></a>
+  <a href="dahuozi.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ZhaoXuLang</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/dahuozi.github.io/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/dahuozi.github.io/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/dahuozi.github.io/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/dahuozi.github.io/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dahuozi.github.io/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

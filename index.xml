@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>赵绪浪</title>
+    <link>dahuozi.github.io/</link>
+    <description>Recent content on 赵绪浪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>ZhaoXuLang</copyright>
+    <lastBuildDate>Sun, 04 Nov 2018 15:36:13 +0800</lastBuildDate>
+    
+	<atom:link href="dahuozi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>计算机网络</title>
+      <link>dahuozi.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Sun, 04 Nov 2018 15:36:13 +0800</pubDate>
+      
+      <guid>dahuozi.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+      <description>综述</description>
+    </item>
+    
+    <item>
+      <title>git版本管理工具 </title>
+      <link>dahuozi.github.io/post/studygit/</link>
+      <pubDate>Sun, 04 Nov 2018 12:36:52 +0800</pubDate>
+      
+      <guid>dahuozi.github.io/post/studygit/</guid>
+      <description>基础操作 初始化 git init 进行添加文件 git add filename 进行提交 git commit -m&amp;rdquo;说明&amp;rdquo; 进行远程推送 git push 克隆远程仓库 git clone git@git.xxxxxxxxxxx 进行远程拉取 git pull &amp;em</description>
+    </item>
+    
+    <item>
+      <title>About ZhaoXuLang</title>
+      <link>dahuozi.github.io/about/</link>
+      <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>dahuozi.github.io/about/</guid>
+      <description>自我介绍</description>
+    </item>
+    
+  </channel>
+</rss>
