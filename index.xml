@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>ZhaoXuLang</copyright>
-    <lastBuildDate>Sun, 04 Nov 2018 12:36:52 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 05 Nov 2018 18:05:24 +0800</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>设计模式</title>
+      <link>/post/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 05 Nov 2018 18:05:24 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+      <description>大话设计模式 第一章节 工厂模式 1.面向对象的好处？ 2.UML图 3.简述简单工厂模式 &amp;emsp;&amp;emsp;假如我们需要写一个加减乘除的计算器程</description>
+    </item>
     
     <item>
       <title>git版本管理工具 </title>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 赵绪浪</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on 赵绪浪</description>
+    <title>编程 on 赵绪浪</title>
+    <link>/categories/%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 编程 on 赵绪浪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>ZhaoXuLang</copyright>
     <lastBuildDate>Mon, 05 Nov 2018 18:05:24 +0800</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       
       <guid>/post/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
       <description>大话设计模式 第一章节 工厂模式 1.面向对象的好处？ 2.UML图 3.简述简单工厂模式 &amp;emsp;&amp;emsp;假如我们需要写一个加减乘除的计算器程</description>
-    </item>
-    
-    <item>
-      <title>git版本管理工具 </title>
-      <link>/post/studygit/</link>
-      <pubDate>Sun, 04 Nov 2018 12:36:52 +0800</pubDate>
-      
-      <guid>/post/studygit/</guid>
-      <description>基础操作 初始化 git init 进行添加文件 git add filename 进行提交 git commit -m&amp;rdquo;说明&amp;rdquo; 进行远程推送 git push 克隆远程仓库 git clone git@git.xxxxxxxxxxx 进行远程拉取 git pull &amp;em</description>
     </item>
     
   </channel>

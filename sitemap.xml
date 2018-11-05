@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/post/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2018-11-05T18:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/post/studygit/</loc>
     <lastmod>2018-11-04T12:36:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -30,7 +37,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-11-04T12:36:52+08:00</lastmod>
+    <lastmod>2018-11-05T18:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -50,14 +57,28 @@
   
   <url>
     <loc>/categories/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2018-11-04T12:36:52+08:00</lastmod>
+    <lastmod>2018-11-05T18:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2018-11-05T18:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2018-11-05T18:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-11-04T12:36:52+08:00</lastmod>
+    <lastmod>2018-11-05T18:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
