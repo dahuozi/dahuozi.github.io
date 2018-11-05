@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://dahuozi.github.io/sitemap.xml
+Sitemap: sitemap.xml
